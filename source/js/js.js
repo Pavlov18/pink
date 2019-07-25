@@ -1,7 +1,9 @@
 var navMobileButton = document.querySelector(".main-nav__toogle");
 var mobileMenu = document.querySelector(".main-nav");
+var mapIndex = document.querySelector(".contacts__map");
 
 mobileMenu.classList.remove("main-nav--nojs");
+mapIndex.classList.remove("contacts__map--nojs");
 
 
 navMobileButton.addEventListener("click", function (evt) {

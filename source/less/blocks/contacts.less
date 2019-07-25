@@ -53,6 +53,7 @@
     opacity: 0.3;
   }
 }
+
 .contacts__map {
   position: relative;
   display: block;
@@ -72,7 +73,11 @@
     top: 0;
   }
 
-  &::after {
+    &--nojs .contacts__map-image {
+      display: inline-block;
+    }
+
+  &--nojs::after {
     .pseudo(36px;36px);
     left: 50%;
     top: 56%;
@@ -85,6 +90,7 @@
 }
 
 .contacts__map-image {
+  display: none;
   transform: translateY(-445px);
   width: 320px;
 }
@@ -197,6 +203,11 @@
       height: 102px;
     }
   }
+
+.contacts__map-live {
+  position: relative;
+  z-index: 1
+}
 
   .contacts__map-image {
     transform: translateY(-165px);
