@@ -70,7 +70,7 @@
     .mask-bg("bg-triangle-white-footer.svg");
     height: 33px;
     left: 0;
-    top: 0;
+    top: -1;
   }
 
     &--nojs .contacts__map-image {
@@ -94,6 +94,15 @@
   transform: translateY(-445px);
   width: 320px;
 }
+
+.contacts__map-iframe {
+  pointer-events: none;
+
+  &--scroll {
+    pointer-events: all;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .contacts {
@@ -125,6 +134,10 @@
     transform: translateY(-317px;);
     width: 660px;
   }
+
+  .contacts__map-iframe {
+    transform: none;
+}
 
   .contacts__list {
     display: flex;

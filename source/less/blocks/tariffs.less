@@ -17,10 +17,23 @@
 .tariffs__table {
   width: 300%;
   margin-bottom: 42px;
-  transform: translateX(-33.333%);
+
 
   border-collapse: separate;
   border-spacing: 0;
+}
+
+
+.tariff-toggle:nth-of-type(1):checked ~ .tariffs__wrapper .tariffs__table {
+  transform: translateX(none);
+}
+
+.tariff-toggle:nth-of-type(2):checked ~ .tariffs__wrapper .tariffs__table {
+  transform: translateX(-33.33333%);
+}
+
+.tariff-toggle:nth-of-type(3):checked ~ .tariffs__wrapper .tariffs__table {
+    transform: translateX(-66.66666%);
 }
 
 .tariffs__name {

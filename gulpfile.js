@@ -110,9 +110,10 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/img/spriteicon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/**/*.js", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/**/*.js", gulp.series("script", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-  gulp.watch("source/*.js", gulp.series("script", "refresh"));
+
 });
 
 gulp.task("refresh", function (done) {

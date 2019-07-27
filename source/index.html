@@ -108,15 +108,6 @@
         </svg>
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title visually-hidden">Отзывы о приложении</h2>
-          <div class="reviews__list  slider__list">
-            <blockquote class="reviews__item  slider__item">
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <cite class="reviews__author-data">25 лет, водитель трамвая</cite>
-            </blockquote>
-            <button class="reviews__button">Предыдущий отзыв</button>
-            <button class="reviews__button reviews__button--next">Следующий отзыв</button>
-          </div>
           <input class="visually-hidden slider__button" type="radio" id="review-1" name="reviews__review-toggle" checked>
           <input class="visually-hidden slider__button" type="radio" id="review-2" name="reviews__review-toggle">
           <input class="visually-hidden slider__button" type="radio" id="review-3" name="reviews__review-toggle">
@@ -125,80 +116,100 @@
             <label class="reviews__toggle slider__toggle" for="review-2"></label>
             <label class="reviews__toggle slider__toggle" for="review-3"></label>
           </p>
+          <div class="reviews__list  slider__list">
+            <blockquote class="reviews__item slider__item">
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <cite class="reviews__author-data">25 лет, водитель трамвая</cite>
+            </blockquote>
+            <blockquote class="reviews__item  slider__item">
+              <p class="reviews__text">«Супер приложение»</p>
+              <cite class="reviews__author-name">Джейсон Стертем</cite>
+              <cite class="reviews__author-data">31 год, Механик</cite>
+            </blockquote>
+            <blockquote class="reviews__item  slider__item">
+              <p class="reviews__text">«Понравилось приложение»</p>
+              <cite class="reviews__author-name">Реймонд Реддингтон</cite>
+              <cite class="reviews__author-data">58 лет, следователь</cite>
+            </blockquote>
+            <div class="reviews__buttons">
+              <button class="reviews__button">Предыдущий отзыв</button>
+              <button class="reviews__button reviews__button--next">Следующий отзыв</button>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="tariffs">
+      <section class="tariffs slider">
         <h2 class="visually-hidden">Стоимость приложения</h2>
-        <div class="tariffs__wrapper">
-          <table class="tariffs__table">
-            <thead class="tariffs__titles">
-              <tr>
-                <th class="tariffs__name"></th>
-                <th class="tariffs__name">
-                  База
-                  <span class="tariffs__price">1,99 usd</span>
-                </th>
-                <th class="tariffs__name tariffs__name--hit">
-                  Стандарт
-                  <span class="tariffs__price">3,99 usd</span>
-                </th>
-                <th class="tariffs__name">
-                  Анлим
-                  <span class="tariffs__price">9,99 usd</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="tariffs__functions">
-              <tr class="tariffs__functions-row">
-                <td class="tariffs__function tariffs__function-name">Розовый фильтр</td>
-                <td class="tariffs__function tariffs__function--enabled">
-                  <span class="tariffs__function-name-inside">Розовый фильтр</span>+
-                </td>
-                <td class="tariffs__function tariffs__function--enabled">
-                  <span class="tariffs__function-name-inside">Розовый фильтр</span>+
-                </td>
-                <td class="tariffs__function tariffs__function--enabled">
-                  <span class="tariffs__function-name-inside">Розовый фильтр</span>+
-                </td>
-              </tr>
-              <tr class="tariffs__functions-row">
-                <td class="tariffs__function tariffs__function-name">Смайлики</td>
-                <td class="tariffs__function tariffs__function--disabled">
-                  <span class="tariffs__function-name-inside">Смайлики</span>-
-                </td>
-                <td class="tariffs__function tariffs__function--enabled">
-                  <span class="tariffs__function-name-inside">Смайлики</span>+
-                </td>
-                <td class="tariffs__function tariffs__function--enabled">
-                  <span class="tariffs__function-name-inside">Смайлики</span>+
-                </td>
-              </tr>
-              <tr class=" tariffs__functions-row">
-                <td class="tariffs__function tariffs__function-name">Комментарии</td>
-                <td class="tariffs__function tariffs__function--disabled">
-                  <span class="tariffs__function-name-inside">Комментарии</span>-
-                </td>
-                <td class="tariffs__function tariffs__function--disabled">
-                  <span class="tariffs__function-name-inside">Комментарии</span>-
-                </td>
-                <td class="tariffs__function tariffs__function--enabled">
-                  <span class="tariffs__function-name-inside">Комментарии</span>+
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="tariffs__toggles">
-          <input class="visually-hidden slider__button" type="radio" id="tariff-1" name="tariffs__tariff-toggle">
-          <input class="visually-hidden slider__button" type="radio" id="tariff-2" name="tariffs__tariff-toggle" checked>
-          <input class="visually-hidden slider__button" type="radio" id="tariff-3" name="tariffs__tariff-toggle">
-          <p class="slider__toggles-list">
+          <input class="visually-hidden slider__button tariff-toggle" type="radio" id="tariff-1" name="tariffs__tariff-toggle">
+          <input class="visually-hidden slider__button tariff-toggle" type="radio" id="tariff-2" name="tariffs__tariff-toggle" checked>
+          <input class="visually-hidden slider__button tariff-toggle" type="radio" id="tariff-3" name="tariffs__tariff-toggle">
+          <div class="slider__toggles-list tariffs__toggles">
             <label class="tariffs__toggle slider__toggle" for="tariff-1"></label>
             <label class="tariffs__toggle slider__toggle" for="tariff-2"></label>
             <label class="tariffs__toggle slider__toggle" for="tariff-3"></label>
-          </p>
-        </div>
+          </div>
+          <div class="tariffs__wrapper">
+            <table class="tariffs__table">
+              <thead class="tariffs__titles">
+                <tr>
+                  <th class="tariffs__name"></th>
+                  <th class="tariffs__name">
+                    База
+                    <span class="tariffs__price">1,99 usd</span>
+                  </th>
+                  <th class="tariffs__name tariffs__name--hit">
+                    Стандарт
+                    <span class="tariffs__price">3,99 usd</span>
+                  </th>
+                  <th class="tariffs__name">
+                    Анлим
+                    <span class="tariffs__price">9,99 usd</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="tariffs__functions">
+                <tr class="tariffs__functions-row">
+                  <td class="tariffs__function tariffs__function-name">Розовый фильтр</td>
+                  <td class="tariffs__function tariffs__function--enabled">
+                    <span class="tariffs__function-name-inside">Розовый фильтр</span>+
+                  </td>
+                  <td class="tariffs__function tariffs__function--enabled">
+                    <span class="tariffs__function-name-inside">Розовый фильтр</span>+
+                  </td>
+                  <td class="tariffs__function tariffs__function--enabled">
+                    <span class="tariffs__function-name-inside">Розовый фильтр</span>+
+                  </td>
+                </tr>
+                <tr class="tariffs__functions-row">
+                  <td class="tariffs__function tariffs__function-name">Смайлики</td>
+                  <td class="tariffs__function tariffs__function--disabled">
+                    <span class="tariffs__function-name-inside">Смайлики</span>-
+                  </td>
+                  <td class="tariffs__function tariffs__function--enabled">
+                    <span class="tariffs__function-name-inside">Смайлики</span>+
+                  </td>
+                  <td class="tariffs__function tariffs__function--enabled">
+                    <span class="tariffs__function-name-inside">Смайлики</span>+
+                  </td>
+                </tr>
+                <tr class=" tariffs__functions-row">
+                  <td class="tariffs__function tariffs__function-name">Комментарии</td>
+                  <td class="tariffs__function tariffs__function--disabled">
+                    <span class="tariffs__function-name-inside">Комментарии</span>-
+                  </td>
+                  <td class="tariffs__function tariffs__function--disabled">
+                    <span class="tariffs__function-name-inside">Комментарии</span>-
+                  </td>
+                  <td class="tariffs__function tariffs__function--enabled">
+                    <span class="tariffs__function-name-inside">Комментарии</span>+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
       </section>
+
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__main-title">Остались вопросы? Свяжитесь с нами!</h2>
@@ -235,7 +246,7 @@
             <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Наше местоположение">
 
           </picture>
-<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf65b3d692e67d871a5b92b4ae7a6e50edaa62a8b4a3bb841d1a9724c6762ffd&amp;source=constructor" width="100%" height="373" frameborder="0"></iframe>
+          <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf65b3d692e67d871a5b92b4ae7a6e50edaa62a8b4a3bb841d1a9724c6762ffd&amp;source=constructor" width="100%" height="100%" frameborder="0" scroll=false ></iframe>
         </a>
 
       </section>
