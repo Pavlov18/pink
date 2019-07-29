@@ -76,10 +76,27 @@
   }
 }
 
+@keyframes bounce-bottom {
+  0% {
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 .bounce-left {
   animation: bounce-left 0.3s;
 }
 
 .bounce-right {
   animation: bounce-right 0.3s;
+}
+
+.bounce-bottom {
+  animation: bounce-bottom 0.3s;
 }
