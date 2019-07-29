@@ -1,20 +1,5 @@
-var navMobileButton = document.querySelector(".main-nav__toogle");
-var mobileMenu = document.querySelector(".main-nav");
 var mapIndex = document.querySelector(".contacts__map");
 var mapIframe = document.querySelector(".contacts__map-iframe")
-
-mobileMenu.classList.remove("main-nav--nojs");
-mapIndex.classList.remove("contacts__map--nojs");
-
-navMobileButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  if (mobileMenu.classList.contains("main-nav--open")) {
-    mobileMenu.classList.remove("main-nav--open");
-  }
-  else {
-    mobileMenu.classList.add("main-nav--open");
-  }
-});
 
 mapIndex.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -29,18 +14,11 @@ var btnNext = slider.querySelector(".reviews__button--next");
 var sliderContent = slider.querySelector(".slider__list");
 var firstSlide = sliderContent.firstElementChild;
 var finalSlide = sliderContent.lastElementChild;
-var sliderToggles = slider.querySelectorAll(".slider__toggle");
 var sliderTogglesList = slider.querySelector(".slider__toggles-list");
+var sliderToggles = sliderTogglesList.querySelectorAll(".slider__toggle");
 var oldChecked = slider.querySelector(".slider__button:checked");
 
-function ooold() {
-  for (i = 0; i < slideRadio.length; i++) {
-    if (slideRadio[i].checked) {
-        olded = i;
-      }
-    }
-  }
-
+// Определение кнопок слайдера
 function slideButtons() {
   for (i = 0; i < slideRadio.length; i++) {
     if (slideRadio[i].checked) {
@@ -49,7 +27,6 @@ function slideButtons() {
         nextRadio = slideRadio[i+1];
         prevRadio = slideRadio[i-1];
     }
-
     if (i === slideRadio.length - 1) {
         finalRadio = slideRadio[i];
     }
@@ -61,13 +38,11 @@ function slideButtons() {
 
 function funcCurrentSlide() {
   for (i = 0; i < slides.length; i++) {
-
     if (slides[i].classList.contains("slider__item--current")) {
       currentSlide = slides[i];
       nextSlide = slides[i+1];
       prevSlide = slides[i-1];
     }
-
     if (i === slides.length - 1) {
       finalSlide = slides[i];
     }
@@ -122,12 +97,12 @@ btnBack.addEventListener("click", function (evt) {
 
 sliderTogglesList.addEventListener("click", function() {
   slideButtons();
-  for (var i = 0; i < slideRadio.length; i++) {
+  for (i = 0; i < slideRadio.length; i++) {
     slideRadio[i].addEventListener("click", function() {
-      for (var i = 0; i < slideRadio.length; i++) {
+      for (i = 0; i < slideRadio.length; i++) {
         if (slideRadio[i].checked) {
-          numCheck = i + 1;
-          for (var i = 0; i < slides.length; i++) {
+          var numCheck = i + 1;
+          for (i = 0; i < slides.length; i++) {
             slides[i].classList.remove("slider__item--current","bounce-left","bounce-right");
           }
           numSlide = sliderContent.querySelector(".slider__item:nth-of-type(" + numCheck + ")");
@@ -136,11 +111,9 @@ sliderTogglesList.addEventListener("click", function() {
       if (numCheck > (numChecked + 1)) {
         numSlide.classList.add("slider__item--current","bounce-left");
       }
-
       if (numCheck < (numChecked + 1)) {
         numSlide.classList.add("slider__item--current","bounce-right");
       }
-
       if (numCheck === (numChecked + 1)) {
         numSlide.classList.add("slider__item--current");
       }

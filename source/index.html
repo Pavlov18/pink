@@ -2,9 +2,18 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Главная - Pink</title>
+    <title>Pink Htmlacademy - Главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+
+<!-- Список приоритетных файлов при загрузке страницы. Начало -->
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/menu.min.js" as="script">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+<!-- Список приоритетных файлов при загрузке страницы. Конец -->
+
     <link href="css/style.min.css" rel="stylesheet">
     <script src="js/picturefill.min.js"></script>
   </head>
@@ -30,7 +39,7 @@
             <button class="main-nav__toogle">Открыть главное меню</button>
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="index.html" class="main-nav__item-link" title="Главная">Главная</a>
+                <a class="main-nav__item-link" title="Главная">Главная</a>
               </li>
               <li class="main-nav__item">
                 <a href="photo.html" class="main-nav__item-link" title="Фотографии">Фотографии</a>
@@ -107,18 +116,18 @@
         </svg>
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title visually-hidden">Отзывы о приложении</h2>
-          <input class="visually-hidden slider__button" type="radio" id="review-1" name="slider__button" checked>
-          <input class="visually-hidden slider__button" type="radio" id="review-2" name="slider__button">
-          <input class="visually-hidden slider__button" type="radio" id="review-3" name="slider__button">
-          <input class="visually-hidden slider__button" type="radio" id="review-4" name="slider__button" >
-          <input class="visually-hidden slider__button" type="radio" id="review-5" name="slider__button">
-          <input class="visually-hidden slider__button" type="radio" id="review-6" name="slider__button">
           <p class="reviews__toggles-list slider__toggles-list">
+            <input class="visually-hidden slider__button" type="radio" id="review-1" name="slider__button" checked>
             <label class="reviews__toggle slider__toggle" for="review-1"></label>
+            <input class="visually-hidden slider__button" type="radio" id="review-2" name="slider__button">
             <label class="reviews__toggle slider__toggle" for="review-2"></label>
+            <input class="visually-hidden slider__button" type="radio" id="review-3" name="slider__button">
             <label class="reviews__toggle slider__toggle" for="review-3"></label>
+            <input class="visually-hidden slider__button" type="radio" id="review-4" name="slider__button" >
             <label class="reviews__toggle slider__toggle" for="review-4"></label>
+            <input class="visually-hidden slider__button" type="radio" id="review-5" name="slider__button">
             <label class="reviews__toggle slider__toggle" for="review-5"></label>
+            <input class="visually-hidden slider__button" type="radio" id="review-6" name="slider__button">
             <label class="reviews__toggle slider__toggle" for="review-6"></label>
           </p>
           <div class="reviews__list slider__list">
@@ -319,6 +328,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/js.min.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/index.min.js"></script>
   </body>
 </html>
