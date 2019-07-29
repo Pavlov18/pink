@@ -7,7 +7,7 @@
 *.sublime*
 build/
 node_modules/
-css/*.css
+css/
 npm-debug.*
 package-lock.json
 Thumbs.db
