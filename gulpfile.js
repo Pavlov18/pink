@@ -17,8 +17,7 @@ var server = require("browser-sync").create();
 var del = require("del");
 var include = require("posthtml-include");
 var csso = require("gulp-csso");
-var htmlmin = require('gulp-htmlmin');
-
+var htmlmin = require("gulp-htmlmin");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")

@@ -11,16 +11,17 @@
     <link rel="preload" href="js/menu.min.js" as="script">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
 <!-- Список приоритетных файлов при загрузке страницы. Конец -->
 
     <link href="css/style.min.css" rel="stylesheet">
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
+
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
+
     <header class="page-header">
       <div class="page-header__wrapper">
         <nav class="main-nav main-nav--nojs main-nav--open">
@@ -39,7 +40,7 @@
             <button class="main-nav__toogle">Открыть главное меню</button>
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__item-link" title="Главная">Главная</a>
+                <a class="main-nav__item-link main-nav__item-link--current" title="Главная">Главная</a>
               </li>
               <li class="main-nav__item">
                 <a href="photo.html" class="main-nav__item-link" title="Фотографии">Фотографии</a>
@@ -265,15 +266,12 @@
         </div>
         <a class="contacts__map contacts__map--nojs" href="#" title="Перейти на карту">
           <picture>
-
-            <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/wepb" media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/wepb" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
             <source type="image/wepb" srcset="img/bg-map-mobile@1x.webp 2x, img/bg-map-mobile@2x.webp 2x">
-
             <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
             <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Наше местоположение">
-
           </picture>
           <iframe class="contacts__map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Adf65b3d692e67d871a5b92b4ae7a6e50edaa62a8b4a3bb841d1a9724c6762ffd&amp;source=constructor" width="100%" height="100%" frameborder="0" scroll=false ></iframe>
         </a>
