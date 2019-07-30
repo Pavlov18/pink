@@ -50,6 +50,7 @@
 
 .feedback__fieldset {
   .reset-list;
+  
   border: none;
 }
 
@@ -68,11 +69,9 @@
   margin-bottom: 36px;
 
   text-align: left;
-
 }
 
 .feedback__title {
-
   width: 100%;
   display: inline-block;
   margin: 0 auto;
@@ -92,8 +91,6 @@
     text-align: center;
     .font(14px;18px;);
   }
-
-
 
   &--label-checkbox,
   &--label-radio {
@@ -126,7 +123,6 @@
 
   &:hover {
     border-color:@blue;
-
   }
 
   &:active,
@@ -151,8 +147,6 @@
   }
 }
 
-
-
 .feedback__input--message {
   padding: 14px 20px;
   min-height: 200px;
@@ -160,8 +154,6 @@
 
   border: 2px solid @graydark;
 }
-
-
 
 .feedback__title--label-checkbox::before,
 .feedback__title--label-radio::before {
@@ -180,12 +172,14 @@
 .checkbox:disabled ~ .feedback__title--label-checkbox::before {
   background-color: @gray;
   border-color: @graycancel;
+
 }
 
 
 .radio:hover:not(:disabled) ~ .feedback__title--label-radio::before,
 .checkbox:hover:not(:disabled) ~ .feedback__title--label-checkbox::before {
   border-color: @blue;
+  cursor: pointer;
 }
 
 .radio:focus:not(:disabled) ~ .feedback__title--label-radio::before,
@@ -193,6 +187,7 @@
 .radio:active:not(:disabled) ~ .feedback__title--label-radio::before,
 .checkbox:active:not(:disabled) ~ .feedback__title--label-checkbox::before {
   border-color: @pink;
+  cursor: pointer;
 }
 
 .checkbox:checked + .feedback__title--label-checkbox::after {
@@ -213,12 +208,13 @@
 
 .radio:checked + .feedback__title--label-radio::after {
   .pseudo(15px;15px);
-
-  background-color: @pink;
   left: 12px;
   top: 0;
   bottom: 0;
+
   margin: auto;
+
+  background-color: @pink;
   border-radius: 50%;
 }
 
@@ -274,19 +270,7 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: @tablet-width) {
-
   .feedback {
     padding-bottom: 52px;
   }
@@ -406,14 +390,8 @@
 
     &--label-checkbox,
     &--label-radio {
-
       padding-left: 59px;
-
     }
-  }
-
-  .feedback__input {
-
   }
 
   .feedback__input--message {
@@ -427,20 +405,7 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: @desktop-width) {
-
   .feedback {
     .container-desk;
     flex-direction: row;
@@ -506,9 +471,8 @@
 
     &--progress .feedback__list-groups {
       min-height: 122px;
-/*      margin-left: -56px;*/
       padding-right: 0;
-    justify-content: space-between;
+      justify-content: space-between;
     }
 
     &--progress .feedback__group {
@@ -585,20 +549,19 @@
     margin-bottom: 14px;
   }
 
-.feedback__wrapper--emo .feedback__title--fieldset {
+  .feedback__wrapper--emo .feedback__title--fieldset {
     margin-bottom: 14px;
-}
+  }
 
-.feedback__input--message {
+  .feedback__input--message {
     min-height: 127px;
-}
+  }
 
-.feedback__wrapper--emo .feedback__fieldset {
+  .feedback__wrapper--emo .feedback__fieldset {
     padding-bottom: 40px;
-}
+  }
 
-.feedback__required-text--desktop {
-  display: inline;
-}
-
+  .feedback__required-text--desktop {
+    display: inline;
+  }
 }
